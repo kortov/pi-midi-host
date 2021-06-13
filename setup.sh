@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-git clone github.com/sinedied/pi-midi-host
+git clone github.com/kortov/pi-midi-host
 cd pi-midi-host
 
 # Optimize for power efficiency and fast boot
