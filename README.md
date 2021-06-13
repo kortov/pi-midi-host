@@ -18,7 +18,7 @@ Tested with a RPi 3B, but should work with any model. MIDI Bluetooth will only w
 
 Use these alias to quickly manage your midi setup:
 - `midi`: show connected midi devices
-- `connect`: reconnect all midi devices
+- `connectmidi`: reconnect all midi devices
 
 ## How to connect bluetooth keyboards
 
