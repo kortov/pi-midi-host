@@ -3,21 +3,10 @@
 git clone github.com/sinedied/pi-midi-host
 cd pi-midi-host
 
-# Set new user password
-echo "First, let's set a new password for better security!"
-passwd
-
-# Enable SSH
-sudo systemctl enable ssh
-sudo systemctl start ssh
-
 # Optimize for power efficiency and fast boot
 sudo cp config.txt /boot/ -y
 sudo cp cmdline.txt /boot/ -y
 
-# Prepare system
-sudo apt-get update -y
-sudo apt-get upgrade -y
 sudo apt-get install ruby -y
 
 # Install MIDI autoconnect script
@@ -61,13 +50,3 @@ echo >> ~/.bashrc
 echo >> ~/.bashrc
 echo "alias connect='connectall.rb" >> ~/.bashrc
 echo >> ~/.bashrc
-
-# Make FS read-only to avoid SD card corruption
-#git clone https://gitlab.com/larsfp/rpi-readonly
-cd rpi-readonly
-sudo ./setup.sh -y
-cd ..
-
-# Turn on read-only mode
-# Use command "rw" to enable writes again
-ro
